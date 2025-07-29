@@ -1,0 +1,157 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+   font-family: 'Inter', sans-serif; 
+   margin: 0px;
+}
+header{
+    display: flex;
+    padding-bottom: 2px;
+    /* border-bottom: 1px solid #e4e4e4; */
+    align-items: center;
+    background-color: #333; /* Change this to any color you like */
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    position: sticky;
+    top: 0;
+}
+/*change the toolbar look*/
+.navigation {
+  overflow: hidden;
+}
+
+.navigation a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.logo{
+    margin-right: auto;
+    color: white;
+}
+.logo img{
+    max-width: 100px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+  margin-right: 40px; /* Add this line to move dropdowns right */
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navigation a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+.navigation a,
+.dropdown .dropbtn {
+  transition: background-color 0.3s ease;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.center-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+}
+.text-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+    word-break: break-word;
+}
+
+h1, h2, h4 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: 2rem;
+  margin-top: 24px;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* popup */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/City.png');
+  color: white;
+  font-size: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+/* Hidden state */
+#popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#popup h1, #popup p {
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Main content */
+#main-content {
+  padding: 40px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+
+
